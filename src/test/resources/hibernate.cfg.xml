@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MariaDBDialect</property>
+        <property name="connection.url">jdbc:mariadb://10.114.32.44:3306/testdb</property>
+        <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+        <property name = "hibernate.connection.username">OTP7</property>
+        <property name = "hibernate.connection.password">ohjelmistotuotanto1&#038;2</property>
+        <mapping class="managerpro.Model.OrdersEntity"/>
+        <mapping class="managerpro.Model.ReservationsEntity"/>
+        <mapping class="managerpro.Model.TablesEntity"/>
+        <mapping class="managerpro.Model.UsersEntity"/>
+        <mapping class="managerpro.Model.PortionsEntity"/>
+        <mapping class="managerpro.Model.OrderedPortionsEntity"/>
+
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="747.0" prefWidth="1001.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="managerpro.Controller.PortionsController">
+   <children>
+      <AnchorPane prefHeight="30.0" prefWidth="1002.0" />
+      <SplitPane dividerPositions="0.6602641056422569" prefHeight="615.0" prefWidth="600.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="578.0" prefWidth="480.0">
+               <children>
+                  <TableView fx:id="table" maxWidth="-Infinity" prefHeight="614.0" prefWidth="658.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="339.0" prefWidth="417.0">
+               <children>
+                  <VBox layoutX="18.0" layoutY="14.0" prefHeight="383.0" prefWidth="266.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label text="%name.portions_management" />
+                        <TextField fx:id="name" />
+                        <Label text="%price.portions_management">
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="price">
+                           <effect>
+                              <DisplacementMap>
+                                 <mapData>
+                                    <FloatMap />
+                                 </mapData>
+                              </DisplacementMap>
+                           </effect></TextField>
+                        <HBox prefHeight="36.0" prefWidth="266.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#createPortion" text="%create.portions_management" />
+                              <Button mnemonicParsing="false" onAction="#updatePortion" text="%update.portions_management">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#deletePortion" text="%delete.portions_management">
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin></Button>
+                           </children>
+                           <padding>
+                              <Insets top="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</VBox>

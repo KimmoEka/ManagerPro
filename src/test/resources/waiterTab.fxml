@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<Tab text="%waiter" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="managerpro.Controller.WaiterController" onSelectionChanged="#tabOpened">
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="747.0" prefWidth="1001.0">
+   <children>
+      <GridPane fx:id="waiterGridPane" layoutX="14.0" layoutY="14.0" onMouseClicked="#deSelect" visible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <content>
+                  <VBox fx:id="waiterButtonsVBox" onMouseClicked="#deSelect">
+                     <children>
+                        <Button fx:id="newOrderBtn" mnemonicParsing="false" onAction="#newOrderClicked" text="%new_order" />
+                        <Button fx:id="advanceOrderBtn" disable="true" mnemonicParsing="false" onAction="#advanceOrder" text="%advance_order" />
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <content>
+                  <VBox fx:id="waiterOrdersVBox" onMouseClicked="#deSelect" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <content>
+                  <VBox fx:id="waiterReadyVBox" onMouseClicked="#deSelect" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToWidth="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <content>
+                  <VBox fx:id="waiterServedVBox" onMouseClicked="#deSelect" />
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToWidth="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <content>
+                  <VBox fx:id="waiterPaidVBox" />
+               </content>
+            </ScrollPane>
+            <AnchorPane GridPane.columnIndex="1">
+               <children>
+                  <Label text="%waiting" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane GridPane.columnIndex="2">
+               <children>
+                  <Label text="%ready_to_serve" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane GridPane.columnIndex="3">
+               <children>
+                  <Label text="%served" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane GridPane.columnIndex="4">
+               <children>
+                  <Label text="%paid" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+      <AnchorPane fx:id="waiterAnchorPane" prefHeight="747.0" prefWidth="1001.0" visible="false" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="15.0">
+         <children>
+            <SplitPane dividerPositions="0.9418439716312057" orientation="VERTICAL" prefHeight="707.0" prefWidth="951.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <items>
+                  <SplitPane dividerPositions="0.33192834562697576, 0.6659641728134879" prefHeight="707.0" prefWidth="951.0" SplitPane.resizableWithParent="false">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="705.0" prefWidth="151.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <VBox id="tablesVBox" fx:id="newOrderTablesVBox" prefHeight="661.0" prefWidth="312.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="705.0" prefWidth="290.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <SplitPane dividerPositions="0.17354196301564723" layoutX="31.0" layoutY="118.0" orientation="VERTICAL" prefHeight="705.0" prefWidth="311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane maxHeight="100.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <Label id="tableLabel" fx:id="newOrderTableLabel" alignment="CENTER" layoutX="141.0" layoutY="47.0" text="%select_table" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font size="72.0" />
+                                             </font>
+                                          </Label>
+                                       </children></AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" SplitPane.resizableWithParent="false">
+                                       <children>
+                                          <ScrollPane fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <content>
+                                                <VBox id="orderedPortionsVBox" fx:id="newOrderOpVBox" prefHeight="542.0" prefWidth="309.0" />
+                                             </content>
+                                          </ScrollPane>
+                                       </children></AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="705.0" prefWidth="289.0" SplitPane.resizableWithParent="false">
+                           <children>
+                              <VBox id="portionsVBox" fx:id="newOrderPortionsVBox" prefHeight="705.0" prefWidth="314.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                  <AnchorPane fx:id="newOrderAnchorPane" maxHeight="50.0" prefHeight="200.0" prefWidth="200.0" SplitPane.resizableWithParent="false">
+                     <children>
+                        <Button fx:id="confirmOrderBtn" disable="true" id="confirmOrderBtn" maxWidth="400.0" mnemonicParsing="false" onAction="#createNewOrder" prefHeight="38.0" prefWidth="116.0" text="%confirm_order" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <Button id="closeBtn" layoutX="833.0" maxWidth="400.0" mnemonicParsing="false" onAction="#closeNewOrderDialog" prefHeight="38.0" prefWidth="116.0" text="%close" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+               </items>
+            </SplitPane>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
+</Tab>
